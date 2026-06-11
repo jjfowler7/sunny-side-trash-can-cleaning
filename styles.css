@@ -590,11 +590,21 @@ input:focus {
 @media (max-width: 620px) {
   .site-header {
     position: static;
+    flex-wrap: wrap;
     align-items: flex-start;
   }
 
-  .nav-links a:not(.nav-cta) {
-    display: none;
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.35rem;
+    font-size: 0.86rem;
+  }
+
+  .nav-links a {
+    flex: 1 1 auto;
+    padding: 0.5rem 0.45rem;
+    text-align: center;
   }
 
   h1 {
