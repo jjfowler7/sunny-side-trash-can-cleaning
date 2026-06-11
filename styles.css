@@ -41,6 +41,18 @@ a {
   color: inherit;
 }
 
+.inline-link {
+  color: var(--sky-dark);
+  font-weight: 900;
+  text-decoration-color: rgba(11, 102, 133, 0.35);
+  text-underline-offset: 0.18em;
+}
+
+.inline-link:hover,
+.inline-link:focus-visible {
+  text-decoration-color: currentColor;
+}
+
 .skip-link {
   position: absolute;
   left: 1rem;
@@ -287,6 +299,7 @@ h3 {
 }
 
 .quick-book,
+.pricing-section,
 .split-section,
 .contact-strip {
   display: grid;
@@ -346,6 +359,86 @@ input:focus {
   min-height: 1.5rem;
   margin: 0;
   color: var(--sky-dark);
+  font-weight: 800;
+}
+
+.pricing-section {
+  gap: 1.4rem;
+}
+
+.pricing-heading {
+  margin-bottom: 0;
+}
+
+.pricing-heading p:last-child {
+  max-width: 43rem;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.price-card {
+  display: grid;
+  gap: 0.85rem;
+  align-content: start;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background: var(--white);
+  box-shadow: 5px 5px 0 rgba(28, 159, 209, 0.18);
+}
+
+.price-card.featured {
+  background: var(--paper);
+  box-shadow: 7px 7px 0 var(--sun-deep);
+}
+
+.price-kicker {
+  margin: 0;
+  color: var(--sky-dark);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+
+.price-row span {
+  color: #32444f;
+  font-weight: 800;
+}
+
+.price-row strong {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.price-note,
+.pricing-disclaimer {
+  color: var(--muted);
+}
+
+.price-note {
+  margin: 0;
+}
+
+.pricing-disclaimer {
+  margin: 0;
+  border-left: 4px solid var(--sun-deep);
+  padding: 0.2rem 0 0.2rem 0.8rem;
   font-weight: 800;
 }
 
@@ -476,6 +569,10 @@ input:focus {
     margin-inline: auto;
   }
 
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .steps,
   .feature-grid {
     grid-template-columns: 1fr;
@@ -506,6 +603,10 @@ input:focus {
 
   .hero-actions .button {
     width: 100%;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
   }
 
 }

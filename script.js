@@ -6,10 +6,11 @@ const copyStatus = document.querySelector("#copyStatus");
 function buildMessage() {
   const canCount = document.querySelector("#canCount").value;
   const timing = document.querySelector("#timing").value;
+  const servicePlan = document.querySelector("#servicePlan").value;
   const serviceAddress = document.querySelector("#serviceAddress").value.trim();
   const addressText = serviceAddress ? ` at ${serviceAddress}` : "";
 
-  return `Hi Sunny Side Trash Can Cleaning! I'd like to schedule cleaning for ${canCount}${addressText}. My preferred timing is ${timing}.`;
+  return `Hi Sunny Side Trash Can Cleaning! I'd like to schedule the ${servicePlan} for ${canCount}${addressText}. My preferred timing is ${timing}.`;
 }
 
 function updateSmsLink() {

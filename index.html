@@ -44,6 +44,7 @@
       </a>
       <nav class="nav-links" aria-label="Site">
         <a href="#how-it-works">How it works</a>
+        <a href="#pricing">Pricing</a>
         <a href="#why-sunny">Why Sunny</a>
         <a class="nav-cta" href="tel:+14238027192">Call</a>
       </nav>
@@ -88,6 +89,7 @@
           <p>
             Pick the details, then send the ready-made message. No form data is
             stored on this website.
+            <a class="inline-link" href="#pricing">See prices below.</a>
           </p>
         </div>
         <form class="booking-builder" id="bookingForm">
@@ -110,6 +112,16 @@
             </select>
           </label>
           <label>
+            Plan
+            <select id="servicePlan" name="servicePlan">
+              <option selected>One-time clean</option>
+              <option>Monthly plan</option>
+              <option>Every 2 weeks plan</option>
+              <option>Weekly plan</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+          <label>
             Service address
             <input id="serviceAddress" name="serviceAddress" type="text" autocomplete="street-address" placeholder="Street address">
           </label>
@@ -117,6 +129,75 @@
           <button class="button ghost full" id="copyMessage" type="button">Copy message</button>
           <p class="copy-status" id="copyStatus" role="status" aria-live="polite"></p>
         </form>
+      </section>
+
+      <section class="pricing-section" id="pricing" aria-labelledby="pricing-title">
+        <div class="section-heading pricing-heading">
+          <p class="eyebrow">Simple prices</p>
+          <h2 id="pricing-title">Pick the clean that fits your cans.</h2>
+          <p>
+            Prices are based on the number of cans and how often you want them
+            cleaned. For 3 or more cans, text for a quick quote.
+          </p>
+        </div>
+        <div class="pricing-grid" aria-label="Trash can cleaning prices">
+          <article class="price-card featured">
+            <p class="price-kicker">Try it once</p>
+            <h3>One-time clean</h3>
+            <div class="price-row">
+              <span>1 can</span>
+              <strong>$20</strong>
+            </div>
+            <div class="price-row">
+              <span>2 cans</span>
+              <strong>$35</strong>
+            </div>
+            <p class="price-note">Great for the first clean or a quick refresh.</p>
+          </article>
+          <article class="price-card">
+            <p class="price-kicker">Once a month</p>
+            <h3>Monthly plan</h3>
+            <div class="price-row">
+              <span>1 can</span>
+              <strong>$17.50</strong>
+            </div>
+            <div class="price-row">
+              <span>2 cans</span>
+              <strong>$30</strong>
+            </div>
+            <p class="price-note">One cleaning each month. 12-month plan minimum.</p>
+          </article>
+          <article class="price-card">
+            <p class="price-kicker">Steady clean</p>
+            <h3>Every 2 weeks</h3>
+            <div class="price-row">
+              <span>1 can</span>
+              <strong>$15</strong>
+            </div>
+            <div class="price-row">
+              <span>2 cans</span>
+              <strong>$25</strong>
+            </div>
+            <p class="price-note">Cleaned every other week. 9-month plan minimum.</p>
+          </article>
+          <article class="price-card">
+            <p class="price-kicker">Freshest curb</p>
+            <h3>Weekly plan</h3>
+            <div class="price-row">
+              <span>1 can</span>
+              <strong>$10</strong>
+            </div>
+            <div class="price-row">
+              <span>2 cans</span>
+              <strong>$20</strong>
+            </div>
+            <p class="price-note">Cleaned every week. 6-month plan minimum.</p>
+          </article>
+        </div>
+        <p class="pricing-disclaimer">
+          Plan prices are shown per scheduled cleaning. Ending a plan early may
+          include an extra fee.
+        </p>
       </section>
 
       <section class="section-band" id="how-it-works">
